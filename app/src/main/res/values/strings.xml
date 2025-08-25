@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">Wordle</string>
+    <string name="Letter1_1">S</string>
+    <string name="Letter1_2">I</string>
+    <string name="Letter1_3">M</string>
+    <string name="Letter1_4">O</string>
+    <string name="Letter1_5">N</string>
+    <string-array name="DefaultLetters">
+        <item>S</item>
+        <item>I</item>
+        <item>M</item>
+        <item>O</item>
+        <item>N</item>
+
+        <item>L</item>
+        <item>E</item>
+        <item>G</item>
+        <item>A</item>
+        <item>T</item>
+
+        <item>W</item>
+        <item>U</item>
+        <item>R</item>
+        <item>S</item>
+        <item>T</item>
+
+        <item>W</item>
+        <item>O</item>
+        <item>R</item>
+        <item>T</item>
+        <item>E</item>
+
+
+    </string-array>
+
+</resources>
