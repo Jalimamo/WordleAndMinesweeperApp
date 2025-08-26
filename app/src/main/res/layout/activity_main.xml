@@ -6,92 +6,505 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TableLayout
+    <ScrollView
+        android:id="@+id/GuessesScrollView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="32dp"
         android:layout_marginBottom="32dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/Keyboard"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TableLayout
+                    android:id="@+id/Guesses"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginBottom="24dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TableRow
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/letterView1_1"
+                            android:layout_width="@dimen/LetterWidth"
+                            android:layout_height="@dimen/LetterHeight"
+                            android:background="@drawable/textview_border_right"
+                            android:textColor="@android:color/white"
+                            android:ems="10"
+                            android:padding="@dimen/LetterPadding"
+                            android:text="@string/Letter1_1"
+                            android:textAlignment="center"
+                            android:textSize="@dimen/LetterTextSize" />
+
+                        <TextView
+                            android:id="@+id/letterView1_2"
+                            android:layout_width="@dimen/LetterWidth"
+                            android:layout_height="@dimen/LetterHeight"
+                            android:background="@drawable/textview_border_wrongplace"
+                            android:textColor="@android:color/white"
+                            android:ems="10"
+                            android:padding="@dimen/LetterPadding"
+                            android:text="@string/Letter1_2"
+                            android:textAlignment="center"
+                            android:textSize="@dimen/LetterTextSize" />
+
+                        <TextView
+                            android:id="@+id/letterView1_3"
+                            android:layout_width="@dimen/LetterWidth"
+                            android:layout_height="@dimen/LetterHeight"
+                            android:background="@drawable/textview_border_wrong"
+                            android:textColor="@android:color/white"
+                            android:ems="10"
+                            android:padding="@dimen/LetterPadding"
+                            android:text="@string/Letter1_3"
+                            android:textAlignment="center"
+                            android:textSize="@dimen/LetterTextSize" />
+
+                        <TextView
+                            android:id="@+id/letterView1_4"
+                            android:layout_width="@dimen/LetterWidth"
+                            android:layout_height="@dimen/LetterHeight"
+                            android:background="@drawable/textview_border_default"
+                            android:textColor="@android:color/white"
+                            android:ems="10"
+                            android:padding="@dimen/LetterPadding"
+                            android:text="@string/Letter1_4"
+                            android:textAlignment="center"
+                            android:textSize="@dimen/LetterTextSize" />
+
+                        <TextView
+                            android:id="@+id/letterView1_5"
+                            android:layout_width="@dimen/LetterWidth"
+                            android:layout_height="@dimen/LetterHeight"
+                            android:background="@drawable/textview_border_default"
+                            android:textColor="@android:color/white"
+                            android:ems="10"
+                            android:padding="@dimen/LetterPadding"
+                            android:text="@string/Letter1_5"
+                            android:textAlignment="center"
+                            android:textSize="@dimen/LetterTextSize" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/letterView2_1"
+                            android:layout_width="@dimen/LetterWidth"
+                            android:layout_height="@dimen/LetterHeight"
+                            android:background="@drawable/textview_border_default"
+                            android:textColor="@android:color/white"
+                            android:ems="10"
+                            android:padding="@dimen/LetterPadding"
+                            android:text="@string/Letter2_1"
+                            android:textAlignment="center"
+                            android:textSize="@dimen/LetterTextSize" />
+
+                        <TextView
+                            android:id="@+id/letterView2_2"
+                            android:layout_width="@dimen/LetterWidth"
+                            android:layout_height="@dimen/LetterHeight"
+                            android:background="@drawable/textview_border_default"
+                            android:textColor="@android:color/white"
+                            android:ems="10"
+                            android:padding="@dimen/LetterPadding"
+                            android:text="@string/Letter2_2"
+                            android:textAlignment="center"
+                            android:textSize="@dimen/LetterTextSize" />
+
+                        <TextView
+                            android:id="@+id/letterView2_3"
+                            android:layout_width="@dimen/LetterWidth"
+                            android:layout_height="@dimen/LetterHeight"
+                            android:background="@drawable/textview_border_default"
+                            android:textColor="@android:color/white"
+                            android:ems="10"
+                            android:padding="@dimen/LetterPadding"
+                            android:text="@string/Letter2_3"
+                            android:textAlignment="center"
+                            android:textSize="@dimen/LetterTextSize" />
+
+                        <TextView
+                            android:id="@+id/letterView2_4"
+                            android:layout_width="@dimen/LetterWidth"
+                            android:layout_height="@dimen/LetterHeight"
+                            android:background="@drawable/textview_border_default"
+                            android:textColor="@android:color/white"
+                            android:ems="10"
+                            android:padding="@dimen/LetterPadding"
+                            android:text="@string/Letter2_4"
+                            android:textAlignment="center"
+                            android:textSize="@dimen/LetterTextSize" />
+
+                        <TextView
+                            android:id="@+id/letterView2_5"
+                            android:layout_width="@dimen/LetterWidth"
+                            android:layout_height="@dimen/LetterHeight"
+                            android:background="@drawable/textview_border_default"
+                            android:textColor="@android:color/white"
+                            android:ems="10"
+                            android:padding="@dimen/LetterPadding"
+                            android:text="@string/Letter2_5"
+                            android:textAlignment="center"
+                            android:textSize="@dimen/LetterTextSize" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                    </TableRow>
+                </TableLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <TableLayout
+        android:id="@+id/Keyboard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
 
         <TableRow
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
 
-            <EditText
-                android:id="@+id/editTextText1"
-                android:layout_width="64dp"
-                android:layout_height="64dp"
-                android:ems="10"
-                android:inputType="text"
-                android:text="@string/Letter1_1"
-                android:textAlignment="center" />
+            <Button
+                android:id="@+id/button1_1"
+                android:layout_width="@dimen/KeyboardKeyWidth"
+                android:layout_height="@dimen/KeyboardKeyHeight"
+                android:backgroundTint="@color/defaultColorKeys"
+                android:padding="@dimen/KeyboardKeyPadding"
+                android:text="@string/Key1_1"
+                android:textSize="@dimen/KeyboardKeyTextSize" />
 
-            <EditText
-                android:id="@+id/editTextText2"
-                android:layout_width="64dp"
-                android:layout_height="64dp"
-                android:ems="10"
-                android:inputType="text"
-                android:text="@string/Letter1_2"
-                android:textAlignment="center" />
+            <Button
+                android:id="@+id/button1_2"
+                android:layout_width="@dimen/KeyboardKeyWidth"
+                android:layout_height="@dimen/KeyboardKeyHeight"
+                android:backgroundTint="@color/defaultColorKeys"
+                android:padding="@dimen/KeyboardKeyPadding"
+                android:text="@string/Key1_2"
+                android:textSize="@dimen/KeyboardKeyTextSize" />
 
-            <EditText
-                android:id="@+id/editTextText3"
-                android:layout_width="64dp"
-                android:layout_height="64dp"
-                android:ems="10"
-                android:inputType="text"
-                android:text="@string/Letter1_3"
-                android:textAlignment="center" />
+            <Button
+                android:id="@+id/button1_3"
+                android:layout_width="@dimen/KeyboardKeyWidth"
+                android:layout_height="@dimen/KeyboardKeyHeight"
+                android:backgroundTint="@color/defaultColorKeys"
+                android:padding="@dimen/KeyboardKeyPadding"
+                android:text="@string/Key1_3"
+                android:textSize="@dimen/KeyboardKeyTextSize" />
 
-            <EditText
-                android:id="@+id/editTextText4"
-                android:layout_width="64dp"
-                android:layout_height="64dp"
-                android:ems="10"
-                android:inputType="text"
-                android:text="@string/Letter1_4"
-                android:textAlignment="center" />
+            <Button
+                android:id="@+id/button1_4"
+                android:layout_width="@dimen/KeyboardKeyWidth"
+                android:layout_height="@dimen/KeyboardKeyHeight"
+                android:backgroundTint="@color/defaultColorKeys"
+                android:padding="@dimen/KeyboardKeyPadding"
+                android:text="@string/Key1_4"
+                android:textSize="@dimen/KeyboardKeyTextSize" />
 
-            <EditText
-                android:id="@+id/editTextText5"
-                android:layout_width="64dp"
-                android:layout_height="64dp"
-                android:ems="10"
-                android:inputType="text"
-                android:text="@string/Letter1_5"
-                android:textAlignment="center" />
+            <Button
+                android:id="@+id/button1_5"
+                android:layout_width="@dimen/KeyboardKeyWidth"
+                android:layout_height="@dimen/KeyboardKeyHeight"
+                android:backgroundTint="@color/defaultColorKeys"
+                android:padding="@dimen/KeyboardKeyPadding"
+                android:text="@string/Key1_5"
+                android:textSize="@dimen/KeyboardKeyTextSize" />
 
+            <Button
+                android:id="@+id/button1_6"
+                android:layout_width="@dimen/KeyboardKeyWidth"
+                android:layout_height="@dimen/KeyboardKeyHeight"
+                android:backgroundTint="@color/defaultColorKeys"
+                android:padding="@dimen/KeyboardKeyPadding"
+                android:text="@string/Key1_6"
+                android:textSize="@dimen/KeyboardKeyTextSize" />
+
+            <Button
+                android:id="@+id/button1_7"
+                android:layout_width="@dimen/KeyboardKeyWidth"
+                android:layout_height="@dimen/KeyboardKeyHeight"
+                android:backgroundTint="@color/defaultColorKeys"
+                android:padding="@dimen/KeyboardKeyPadding"
+                android:text="@string/Key1_7"
+                android:textSize="@dimen/KeyboardKeyTextSize" />
+
+            <Button
+                android:id="@+id/button1_8"
+                android:layout_width="@dimen/KeyboardKeyWidth"
+                android:layout_height="@dimen/KeyboardKeyHeight"
+                android:backgroundTint="@color/defaultColorKeys"
+                android:padding="@dimen/KeyboardKeyPadding"
+                android:text="@string/Key1_8"
+                android:textSize="@dimen/KeyboardKeyTextSize" />
+
+            <Button
+                android:id="@+id/button1_9"
+                android:layout_width="@dimen/KeyboardKeyWidth"
+                android:layout_height="@dimen/KeyboardKeyHeight"
+                android:backgroundTint="@color/defaultColorKeys"
+                android:padding="@dimen/KeyboardKeyPadding"
+                android:text="@string/Key1_9"
+                android:textSize="@dimen/KeyboardKeyTextSize" />
+
+            <Button
+                android:id="@+id/button1_10"
+                android:layout_width="@dimen/KeyboardKeyWidth"
+                android:layout_height="@dimen/KeyboardKeyHeight"
+                android:backgroundTint="@color/defaultColorKeys"
+                android:padding="@dimen/KeyboardKeyPadding"
+                android:text="@string/Key1_10"
+                android:textSize="@dimen/KeyboardKeyTextSize" />
+
+            <Button
+                android:id="@+id/button1_11"
+                android:layout_width="@dimen/KeyboardKeyWidth"
+                android:layout_height="@dimen/KeyboardKeyHeight"
+                android:backgroundTint="@color/defaultColorKeys"
+                android:padding="@dimen/KeyboardKeyPadding"
+                android:text="@string/Key1_11"
+                android:textSize="@dimen/KeyboardKeyTextSize" />
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
+            <Button
+                android:id="@+id/button2_1"
+                android:layout_width="@dimen/KeyboardKeyWidth"
+                android:layout_height="@dimen/KeyboardKeyHeight"
+                android:backgroundTint="@color/defaultColorKeys"
+                android:padding="@dimen/KeyboardKeyPadding"
+                android:text="@string/Key2_1"
+                android:textSize="@dimen/KeyboardKeyTextSize" />
+
+            <Button
+                android:id="@+id/button2_2"
+                android:layout_width="@dimen/KeyboardKeyWidth"
+                android:layout_height="@dimen/KeyboardKeyHeight"
+                android:backgroundTint="@color/defaultColorKeys"
+                android:padding="@dimen/KeyboardKeyPadding"
+                android:text="@string/Key2_2"
+                android:textSize="@dimen/KeyboardKeyTextSize" />
+
+            <Button
+                android:id="@+id/button2_3"
+                android:layout_width="@dimen/KeyboardKeyWidth"
+                android:layout_height="@dimen/KeyboardKeyHeight"
+                android:backgroundTint="@color/defaultColorKeys"
+                android:padding="@dimen/KeyboardKeyPadding"
+                android:text="@string/Key2_3"
+                android:textSize="@dimen/KeyboardKeyTextSize" />
+
+            <Button
+                android:id="@+id/button2_4"
+                android:layout_width="@dimen/KeyboardKeyWidth"
+                android:layout_height="@dimen/KeyboardKeyHeight"
+                android:backgroundTint="@color/defaultColorKeys"
+                android:padding="@dimen/KeyboardKeyPadding"
+                android:text="@string/Key2_4"
+                android:textSize="@dimen/KeyboardKeyTextSize" />
+
+            <Button
+                android:id="@+id/button2_5"
+                android:layout_width="@dimen/KeyboardKeyWidth"
+                android:layout_height="@dimen/KeyboardKeyHeight"
+                android:backgroundTint="@color/defaultColorKeys"
+                android:padding="@dimen/KeyboardKeyPadding"
+                android:text="@string/Key2_5"
+                android:textSize="@dimen/KeyboardKeyTextSize" />
+
+            <Button
+                android:id="@+id/button2_6"
+                android:layout_width="@dimen/KeyboardKeyWidth"
+                android:layout_height="@dimen/KeyboardKeyHeight"
+                android:backgroundTint="@color/defaultColorKeys"
+                android:padding="@dimen/KeyboardKeyPadding"
+                android:text="@string/Key2_6"
+                android:textSize="@dimen/KeyboardKeyTextSize" />
+
+            <Button
+                android:id="@+id/button2_7"
+                android:layout_width="@dimen/KeyboardKeyWidth"
+                android:layout_height="@dimen/KeyboardKeyHeight"
+                android:backgroundTint="@color/defaultColorKeys"
+                android:padding="@dimen/KeyboardKeyPadding"
+                android:text="@string/Key2_7"
+                android:textSize="@dimen/KeyboardKeyTextSize" />
+
+            <Button
+                android:id="@+id/button2_8"
+                android:layout_width="@dimen/KeyboardKeyWidth"
+                android:layout_height="@dimen/KeyboardKeyHeight"
+                android:backgroundTint="@color/defaultColorKeys"
+                android:padding="@dimen/KeyboardKeyPadding"
+                android:text="@string/Key2_8"
+                android:textSize="@dimen/KeyboardKeyTextSize" />
+
+            <Button
+                android:id="@+id/button2_9"
+                android:layout_width="@dimen/KeyboardKeyWidth"
+                android:layout_height="@dimen/KeyboardKeyHeight"
+                android:backgroundTint="@color/defaultColorKeys"
+                android:padding="@dimen/KeyboardKeyPadding"
+                android:text="@string/Key2_9"
+                android:textSize="@dimen/KeyboardKeyTextSize" />
+
+            <Button
+                android:id="@+id/button2_10"
+                android:layout_width="@dimen/KeyboardKeyWidth"
+                android:layout_height="@dimen/KeyboardKeyHeight"
+                android:backgroundTint="@color/defaultColorKeys"
+                android:padding="@dimen/KeyboardKeyPadding"
+                android:text="@string/Key2_10"
+                android:textSize="@dimen/KeyboardKeyTextSize" />
+
+            <Button
+                android:id="@+id/button2_11"
+                android:layout_width="@dimen/KeyboardKeyWidth"
+                android:layout_height="@dimen/KeyboardKeyHeight"
+                android:backgroundTint="@color/defaultColorKeys"
+                android:padding="@dimen/KeyboardKeyPadding"
+                android:text="@string/Key2_11"
+                android:textSize="@dimen/KeyboardKeyTextSize" />
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
+            <Button
+                android:id="@+id/button3_1"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/KeyboardKeyHeight"
+                android:backgroundTint="@color/defaultColorKeys"
+                android:padding="@dimen/KeyboardKeyPadding"
+                android:text="@string/Key3_1"
+                android:textSize="@dimen/KeyboardKeyTextSize"
+                android:layout_span="2"/>
+
+            <Button
+                android:id="@+id/button3_2"
+                android:layout_width="@dimen/KeyboardKeyWidth"
+                android:layout_height="@dimen/KeyboardKeyHeight"
+                android:backgroundTint="@color/defaultColorKeys"
+                android:padding="@dimen/KeyboardKeyPadding"
+                android:text="@string/Key3_2"
+                android:textSize="@dimen/KeyboardKeyTextSize" />
+
+            <Button
+                android:id="@+id/button3_3"
+                android:layout_width="@dimen/KeyboardKeyWidth"
+                android:layout_height="@dimen/KeyboardKeyHeight"
+                android:backgroundTint="@color/defaultColorKeys"
+                android:padding="@dimen/KeyboardKeyPadding"
+                android:text="@string/Key3_3"
+                android:textSize="@dimen/KeyboardKeyTextSize" />
+
+            <Button
+                android:id="@+id/button3_4"
+                android:layout_width="@dimen/KeyboardKeyWidth"
+                android:layout_height="@dimen/KeyboardKeyHeight"
+                android:backgroundTint="@color/defaultColorKeys"
+                android:padding="@dimen/KeyboardKeyPadding"
+                android:text="@string/Key3_4"
+                android:textSize="@dimen/KeyboardKeyTextSize" />
+
+            <Button
+                android:id="@+id/button3_5"
+                android:layout_width="@dimen/KeyboardKeyWidth"
+                android:layout_height="@dimen/KeyboardKeyHeight"
+                android:backgroundTint="@color/defaultColorKeys"
+                android:padding="@dimen/KeyboardKeyPadding"
+                android:text="@string/Key3_5"
+                android:textSize="@dimen/KeyboardKeyTextSize" />
+
+            <Button
+                android:id="@+id/button3_6"
+                android:layout_width="@dimen/KeyboardKeyWidth"
+                android:layout_height="@dimen/KeyboardKeyHeight"
+                android:backgroundTint="@color/defaultColorKeys"
+                android:padding="@dimen/KeyboardKeyPadding"
+                android:text="@string/Key3_6"
+                android:textSize="@dimen/KeyboardKeyTextSize" />
+
+            <Button
+                android:id="@+id/button3_7"
+                android:layout_width="@dimen/KeyboardKeyWidth"
+                android:layout_height="@dimen/KeyboardKeyHeight"
+                android:backgroundTint="@color/defaultColorKeys"
+                android:padding="@dimen/KeyboardKeyPadding"
+                android:text="@string/Key3_7"
+                android:textSize="@dimen/KeyboardKeyTextSize" />
+
+            <Button
+                android:id="@+id/button3_8"
+                android:layout_width="@dimen/KeyboardKeyWidth"
+                android:layout_height="@dimen/KeyboardKeyHeight"
+                android:backgroundTint="@color/defaultColorKeys"
+                android:padding="@dimen/KeyboardKeyPadding"
+                android:text="@string/Key3_8"
+                android:textSize="@dimen/KeyboardKeyTextSize" />
+
+            <Button
+                android:id="@+id/button3_9"
+                android:layout_width="@dimen/KeyboardKeyWidth"
+                android:layout_height="@dimen/KeyboardKeyHeight"
+                android:backgroundTint="@color/defaultColorKeys"
+                android:padding="@dimen/KeyboardKeyPadding"
+                android:text="@string/Key3_9"
+                android:textSize="@dimen/KeyboardKeyTextSize"
+                android:layout_span="2"/>
+
+
         </TableRow>
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-        </TableRow>
     </TableLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

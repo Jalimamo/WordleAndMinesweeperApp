@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="LetterWidth">64dp</dimen>
+    <dimen name="LetterHeight">64dp</dimen>
+    <dimen name="LetterTextSize">16sp</dimen>
+    <dimen name="LetterPadding">16dp</dimen>
+
+    <dimen name="KeyboardKeyWidth">36dp</dimen>
+    <dimen name="KeyboardEnterWidth">108dp</dimen>
+    <dimen name="KeyboardKeyHeight">48dp</dimen>
+    <dimen name="KeyboardKeyTextSize">16sp</dimen>
+    <dimen name="KeyboardKeyPadding">2dp</dimen>
+
+    <dimen name="TextViewBorderWidth">1dp</dimen>
+    <dimen name="TextViewBorderRadius">0dp</dimen>
+</resources>

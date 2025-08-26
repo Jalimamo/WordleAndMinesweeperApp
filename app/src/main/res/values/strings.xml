@@ -1,36 +1,85 @@
 <resources>
     <string name="app_name">Wordle</string>
+
+    <string name="LetterWidth">64dp</string>
+
     <string name="Letter1_1">S</string>
     <string name="Letter1_2">I</string>
     <string name="Letter1_3">M</string>
     <string name="Letter1_4">O</string>
     <string name="Letter1_5">N</string>
-    <string-array name="DefaultLetters">
-        <item>S</item>
-        <item>I</item>
-        <item>M</item>
-        <item>O</item>
-        <item>N</item>
-
-        <item>L</item>
-        <item>E</item>
-        <item>G</item>
-        <item>A</item>
-        <item>T</item>
-
-        <item>W</item>
-        <item>U</item>
-        <item>R</item>
-        <item>S</item>
-        <item>T</item>
-
-        <item>W</item>
-        <item>O</item>
-        <item>R</item>
-        <item>T</item>
-        <item>E</item>
 
 
-    </string-array>
+    <string name="Letter2_1">L</string>
+    <string name="Letter2_2">E</string>
+    <string name="Letter2_3">G</string>
+    <string name="Letter2_4">A</string>
+    <string name="Letter2_5">T</string>
+
+
+    <string name="Letter3_1">W</string>
+    <string name="Letter3_2">U</string>
+    <string name="Letter3_3">R</string>
+    <string name="Letter3_4">S</string>
+    <string name="Letter3_5">T</string>
+
+
+    <string name="Letter4_1">W</string>
+    <string name="Letter4_2">O</string>
+    <string name="Letter4_3">R</string>
+    <string name="Letter4_4">T</string>
+    <string name="Letter4_5">E</string>
+
+
+    <string name="Letter5_1">P</string>
+    <string name="Letter5_2">I</string>
+    <string name="Letter5_3">Z</string>
+    <string name="Letter5_4">Z</string>
+    <string name="Letter5_5">A</string>
+
+
+    <string name="Letter6_1">L</string>
+    <string name="Letter6_2">E</string>
+    <string name="Letter6_3">G</string>
+    <string name="Letter6_4">A</string>
+    <string name="Letter6_5">T</string>
+
+
+    <string name="Key1_1">Q</string>
+    <string name="Key1_2">W</string>
+    <string name="Key1_3">E</string>
+    <string name="Key1_4">R</string>
+    <string name="Key1_5">T</string>
+    <string name="Key1_6">Z</string>
+    <string name="Key1_7">U</string>
+    <string name="Key1_8">I</string>
+    <string name="Key1_9">O</string>
+    <string name="Key1_10">P</string>
+    <string name="Key1_11">Ü</string>
+
+    <string name="Key2_1">A</string>
+    <string name="Key2_2">S</string>
+    <string name="Key2_3">D</string>
+    <string name="Key2_4">F</string>
+    <string name="Key2_5">G</string>
+    <string name="Key2_6">H</string>
+    <string name="Key2_7">J</string>
+    <string name="Key2_8">K</string>
+    <string name="Key2_9">L</string>
+    <string name="Key2_10">Ö</string>
+    <string name="Key2_11">Ä</string>
+
+    <string name="Key3_1">ENTER</string>
+    <string name="Key3_2">Y</string>
+    <string name="Key3_3">X</string>
+    <string name="Key3_4">C</string>
+    <string name="Key3_5">V</string>
+    <string name="Key3_6">B</string>
+    <string name="Key3_7">N</string>
+    <string name="Key3_8">M</string>
+    <string name="Key3_9">⌫</string>
+
+
+
 
 </resources>

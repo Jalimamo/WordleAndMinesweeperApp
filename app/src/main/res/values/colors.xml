@@ -7,4 +7,10 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="wrongLetter">#3a3a3c</color>
+    <color name="wrongPlace">#b59f3b</color>
+    <color name="rightLetter">#538d4e</color>
+    <color name="defaultColorKeys">#818384</color>
+    <color name="defaultColorLetters">#47474B</color>
+    <color name="textViewBorderColor">#000000</color>
 </resources>
