@@ -171,8 +171,273 @@
                     </TableRow>
 
                     <TableRow
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/letterView3_1"
+                            android:layout_width="@dimen/LetterWidth"
+                            android:layout_height="@dimen/LetterHeight"
+                            android:background="@drawable/textview_border_default"
+                            android:textColor="@android:color/white"
+                            android:ems="10"
+                            android:padding="@dimen/LetterPadding"
+                            android:text="@string/Letter2_1"
+                            android:textAlignment="center"
+                            android:textSize="@dimen/LetterTextSize" />
+
+                        <TextView
+                            android:id="@+id/letterView3_2"
+                            android:layout_width="@dimen/LetterWidth"
+                            android:layout_height="@dimen/LetterHeight"
+                            android:background="@drawable/textview_border_default"
+                            android:textColor="@android:color/white"
+                            android:ems="10"
+                            android:padding="@dimen/LetterPadding"
+                            android:text="@string/Letter2_2"
+                            android:textAlignment="center"
+                            android:textSize="@dimen/LetterTextSize" />
+
+                        <TextView
+                            android:id="@+id/letterView3_3"
+                            android:layout_width="@dimen/LetterWidth"
+                            android:layout_height="@dimen/LetterHeight"
+                            android:background="@drawable/textview_border_default"
+                            android:textColor="@android:color/white"
+                            android:ems="10"
+                            android:padding="@dimen/LetterPadding"
+                            android:text="@string/Letter2_3"
+                            android:textAlignment="center"
+                            android:textSize="@dimen/LetterTextSize" />
+
+                        <TextView
+                            android:id="@+id/letterView3_4"
+                            android:layout_width="@dimen/LetterWidth"
+                            android:layout_height="@dimen/LetterHeight"
+                            android:background="@drawable/textview_border_default"
+                            android:textColor="@android:color/white"
+                            android:ems="10"
+                            android:padding="@dimen/LetterPadding"
+                            android:text="@string/Letter2_4"
+                            android:textAlignment="center"
+                            android:textSize="@dimen/LetterTextSize" />
+
+                        <TextView
+                            android:id="@+id/letterView3_5"
+                            android:layout_width="@dimen/LetterWidth"
+                            android:layout_height="@dimen/LetterHeight"
+                            android:background="@drawable/textview_border_default"
+                            android:textColor="@android:color/white"
+                            android:ems="10"
+                            android:padding="@dimen/LetterPadding"
+                            android:text="@string/Letter2_5"
+                            android:textAlignment="center"
+                            android:textSize="@dimen/LetterTextSize" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/letterView4_1"
+                            android:layout_width="@dimen/LetterWidth"
+                            android:layout_height="@dimen/LetterHeight"
+                            android:background="@drawable/textview_border_default"
+                            android:textColor="@android:color/white"
+                            android:ems="10"
+                            android:padding="@dimen/LetterPadding"
+                            android:text="@string/Letter2_1"
+                            android:textAlignment="center"
+                            android:textSize="@dimen/LetterTextSize" />
+
+                        <TextView
+                            android:id="@+id/letterView4_2"
+                            android:layout_width="@dimen/LetterWidth"
+                            android:layout_height="@dimen/LetterHeight"
+                            android:background="@drawable/textview_border_default"
+                            android:textColor="@android:color/white"
+                            android:ems="10"
+                            android:padding="@dimen/LetterPadding"
+                            android:text="@string/Letter2_2"
+                            android:textAlignment="center"
+                            android:textSize="@dimen/LetterTextSize" />
+
+                        <TextView
+                            android:id="@+id/letterView4_3"
+                            android:layout_width="@dimen/LetterWidth"
+                            android:layout_height="@dimen/LetterHeight"
+                            android:background="@drawable/textview_border_default"
+                            android:textColor="@android:color/white"
+                            android:ems="10"
+                            android:padding="@dimen/LetterPadding"
+                            android:text="@string/Letter2_3"
+                            android:textAlignment="center"
+                            android:textSize="@dimen/LetterTextSize" />
+
+                        <TextView
+                            android:id="@+id/letterView4_4"
+                            android:layout_width="@dimen/LetterWidth"
+                            android:layout_height="@dimen/LetterHeight"
+                            android:background="@drawable/textview_border_default"
+                            android:textColor="@android:color/white"
+                            android:ems="10"
+                            android:padding="@dimen/LetterPadding"
+                            android:text="@string/Letter2_4"
+                            android:textAlignment="center"
+                            android:textSize="@dimen/LetterTextSize" />
+
+                        <TextView
+                            android:id="@+id/letterView4_5"
+                            android:layout_width="@dimen/LetterWidth"
+                            android:layout_height="@dimen/LetterHeight"
+                            android:background="@drawable/textview_border_default"
+                            android:textColor="@android:color/white"
+                            android:ems="10"
+                            android:padding="@dimen/LetterPadding"
+                            android:text="@string/Letter2_5"
+                            android:textAlignment="center"
+                            android:textSize="@dimen/LetterTextSize" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/letterView5_1"
+                            android:layout_width="@dimen/LetterWidth"
+                            android:layout_height="@dimen/LetterHeight"
+                            android:background="@drawable/textview_border_default"
+                            android:textColor="@android:color/white"
+                            android:ems="10"
+                            android:padding="@dimen/LetterPadding"
+                            android:text="@string/Letter2_1"
+                            android:textAlignment="center"
+                            android:textSize="@dimen/LetterTextSize" />
+
+                        <TextView
+                            android:id="@+id/letterView5_2"
+                            android:layout_width="@dimen/LetterWidth"
+                            android:layout_height="@dimen/LetterHeight"
+                            android:background="@drawable/textview_border_default"
+                            android:textColor="@android:color/white"
+                            android:ems="10"
+                            android:padding="@dimen/LetterPadding"
+                            android:text="@string/Letter2_2"
+                            android:textAlignment="center"
+                            android:textSize="@dimen/LetterTextSize" />
+
+                        <TextView
+                            android:id="@+id/letterView5_3"
+                            android:layout_width="@dimen/LetterWidth"
+                            android:layout_height="@dimen/LetterHeight"
+                            android:background="@drawable/textview_border_default"
+                            android:textColor="@android:color/white"
+                            android:ems="10"
+                            android:padding="@dimen/LetterPadding"
+                            android:text="@string/Letter2_3"
+                            android:textAlignment="center"
+                            android:textSize="@dimen/LetterTextSize" />
+
+                        <TextView
+                            android:id="@+id/letterView5_4"
+                            android:layout_width="@dimen/LetterWidth"
+                            android:layout_height="@dimen/LetterHeight"
+                            android:background="@drawable/textview_border_default"
+                            android:textColor="@android:color/white"
+                            android:ems="10"
+                            android:padding="@dimen/LetterPadding"
+                            android:text="@string/Letter2_4"
+                            android:textAlignment="center"
+                            android:textSize="@dimen/LetterTextSize" />
+
+                        <TextView
+                            android:id="@+id/letterView5_5"
+                            android:layout_width="@dimen/LetterWidth"
+                            android:layout_height="@dimen/LetterHeight"
+                            android:background="@drawable/textview_border_default"
+                            android:textColor="@android:color/white"
+                            android:ems="10"
+                            android:padding="@dimen/LetterPadding"
+                            android:text="@string/Letter2_5"
+                            android:textAlignment="center"
+                            android:textSize="@dimen/LetterTextSize" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/letterView6_1"
+                            android:layout_width="@dimen/LetterWidth"
+                            android:layout_height="@dimen/LetterHeight"
+                            android:background="@drawable/textview_border_default"
+                            android:textColor="@android:color/white"
+                            android:ems="10"
+                            android:padding="@dimen/LetterPadding"
+                            android:text="@string/Letter2_1"
+                            android:textAlignment="center"
+                            android:textSize="@dimen/LetterTextSize" />
+
+                        <TextView
+                            android:id="@+id/letterView6_2"
+                            android:layout_width="@dimen/LetterWidth"
+                            android:layout_height="@dimen/LetterHeight"
+                            android:background="@drawable/textview_border_default"
+                            android:textColor="@android:color/white"
+                            android:ems="10"
+                            android:padding="@dimen/LetterPadding"
+                            android:text="@string/Letter2_2"
+                            android:textAlignment="center"
+                            android:textSize="@dimen/LetterTextSize" />
+
+                        <TextView
+                            android:id="@+id/letterView6_3"
+                            android:layout_width="@dimen/LetterWidth"
+                            android:layout_height="@dimen/LetterHeight"
+                            android:background="@drawable/textview_border_default"
+                            android:textColor="@android:color/white"
+                            android:ems="10"
+                            android:padding="@dimen/LetterPadding"
+                            android:text="@string/Letter2_3"
+                            android:textAlignment="center"
+                            android:textSize="@dimen/LetterTextSize" />
+
+                        <TextView
+                            android:id="@+id/letterView6_4"
+                            android:layout_width="@dimen/LetterWidth"
+                            android:layout_height="@dimen/LetterHeight"
+                            android:background="@drawable/textview_border_default"
+                            android:textColor="@android:color/white"
+                            android:ems="10"
+                            android:padding="@dimen/LetterPadding"
+                            android:text="@string/Letter2_4"
+                            android:textAlignment="center"
+                            android:textSize="@dimen/LetterTextSize" />
+
+                        <TextView
+                            android:id="@+id/letterView6_5"
+                            android:layout_width="@dimen/LetterWidth"
+                            android:layout_height="@dimen/LetterHeight"
+                            android:background="@drawable/textview_border_default"
+                            android:textColor="@android:color/white"
+                            android:ems="10"
+                            android:padding="@dimen/LetterPadding"
+                            android:text="@string/Letter2_5"
+                            android:textAlignment="center"
+                            android:textSize="@dimen/LetterTextSize" />
+
+                    </TableRow>
+
+                    <TableRow
                         android:layout_width="match_parent"
                         android:layout_height="match_parent">
+
 
                     </TableRow>
 
@@ -427,6 +692,7 @@
                 android:padding="@dimen/KeyboardKeyPadding"
                 android:text="@string/Key3_1"
                 android:textSize="@dimen/KeyboardKeyTextSize"
+                android:tag="ENTER"
                 android:layout_span="2"/>
 
             <Button
@@ -500,6 +766,7 @@
                 android:padding="@dimen/KeyboardKeyPadding"
                 android:text="@string/Key3_9"
                 android:textSize="@dimen/KeyboardKeyTextSize"
+                android:tag="BACKSPACE"
                 android:layout_span="2"/>
 
 
