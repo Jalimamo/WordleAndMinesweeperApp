@@ -9,8 +9,11 @@
     <ScrollView
         android:id="@+id/GuessesScrollView"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="32dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
         app:layout_constraintBottom_toTopOf="@+id/Keyboard"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -22,8 +25,8 @@
             android:orientation="vertical">
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
 
                 <TableLayout
                     android:id="@+id/Guesses"
@@ -47,11 +50,11 @@
                             android:layout_width="@dimen/LetterWidth"
                             android:layout_height="@dimen/LetterHeight"
                             android:background="@drawable/textview_border_right"
-                            android:textColor="@android:color/white"
                             android:ems="10"
                             android:padding="@dimen/LetterPadding"
                             android:text="@string/Letter1_1"
                             android:textAlignment="center"
+                            android:textColor="@android:color/white"
                             android:textSize="@dimen/LetterTextSize" />
 
                         <TextView
@@ -59,11 +62,11 @@
                             android:layout_width="@dimen/LetterWidth"
                             android:layout_height="@dimen/LetterHeight"
                             android:background="@drawable/textview_border_wrongplace"
-                            android:textColor="@android:color/white"
                             android:ems="10"
                             android:padding="@dimen/LetterPadding"
                             android:text="@string/Letter1_2"
                             android:textAlignment="center"
+                            android:textColor="@android:color/white"
                             android:textSize="@dimen/LetterTextSize" />
 
                         <TextView
@@ -71,11 +74,11 @@
                             android:layout_width="@dimen/LetterWidth"
                             android:layout_height="@dimen/LetterHeight"
                             android:background="@drawable/textview_border_wrong"
-                            android:textColor="@android:color/white"
                             android:ems="10"
                             android:padding="@dimen/LetterPadding"
                             android:text="@string/Letter1_3"
                             android:textAlignment="center"
+                            android:textColor="@android:color/white"
                             android:textSize="@dimen/LetterTextSize" />
 
                         <TextView
@@ -83,11 +86,11 @@
                             android:layout_width="@dimen/LetterWidth"
                             android:layout_height="@dimen/LetterHeight"
                             android:background="@drawable/textview_border_default"
-                            android:textColor="@android:color/white"
                             android:ems="10"
                             android:padding="@dimen/LetterPadding"
                             android:text="@string/Letter1_4"
                             android:textAlignment="center"
+                            android:textColor="@android:color/white"
                             android:textSize="@dimen/LetterTextSize" />
 
                         <TextView
@@ -95,11 +98,11 @@
                             android:layout_width="@dimen/LetterWidth"
                             android:layout_height="@dimen/LetterHeight"
                             android:background="@drawable/textview_border_default"
-                            android:textColor="@android:color/white"
                             android:ems="10"
                             android:padding="@dimen/LetterPadding"
                             android:text="@string/Letter1_5"
                             android:textAlignment="center"
+                            android:textColor="@android:color/white"
                             android:textSize="@dimen/LetterTextSize" />
 
                     </TableRow>
@@ -113,11 +116,11 @@
                             android:layout_width="@dimen/LetterWidth"
                             android:layout_height="@dimen/LetterHeight"
                             android:background="@drawable/textview_border_default"
-                            android:textColor="@android:color/white"
                             android:ems="10"
                             android:padding="@dimen/LetterPadding"
                             android:text="@string/Letter2_1"
                             android:textAlignment="center"
+                            android:textColor="@android:color/white"
                             android:textSize="@dimen/LetterTextSize" />
 
                         <TextView
@@ -125,11 +128,11 @@
                             android:layout_width="@dimen/LetterWidth"
                             android:layout_height="@dimen/LetterHeight"
                             android:background="@drawable/textview_border_default"
-                            android:textColor="@android:color/white"
                             android:ems="10"
                             android:padding="@dimen/LetterPadding"
                             android:text="@string/Letter2_2"
                             android:textAlignment="center"
+                            android:textColor="@android:color/white"
                             android:textSize="@dimen/LetterTextSize" />
 
                         <TextView
@@ -137,11 +140,11 @@
                             android:layout_width="@dimen/LetterWidth"
                             android:layout_height="@dimen/LetterHeight"
                             android:background="@drawable/textview_border_default"
-                            android:textColor="@android:color/white"
                             android:ems="10"
                             android:padding="@dimen/LetterPadding"
                             android:text="@string/Letter2_3"
                             android:textAlignment="center"
+                            android:textColor="@android:color/white"
                             android:textSize="@dimen/LetterTextSize" />
 
                         <TextView
@@ -149,11 +152,11 @@
                             android:layout_width="@dimen/LetterWidth"
                             android:layout_height="@dimen/LetterHeight"
                             android:background="@drawable/textview_border_default"
-                            android:textColor="@android:color/white"
                             android:ems="10"
                             android:padding="@dimen/LetterPadding"
                             android:text="@string/Letter2_4"
                             android:textAlignment="center"
+                            android:textColor="@android:color/white"
                             android:textSize="@dimen/LetterTextSize" />
 
                         <TextView
@@ -161,11 +164,11 @@
                             android:layout_width="@dimen/LetterWidth"
                             android:layout_height="@dimen/LetterHeight"
                             android:background="@drawable/textview_border_default"
-                            android:textColor="@android:color/white"
                             android:ems="10"
                             android:padding="@dimen/LetterPadding"
                             android:text="@string/Letter2_5"
                             android:textAlignment="center"
+                            android:textColor="@android:color/white"
                             android:textSize="@dimen/LetterTextSize" />
 
                     </TableRow>
@@ -179,11 +182,11 @@
                             android:layout_width="@dimen/LetterWidth"
                             android:layout_height="@dimen/LetterHeight"
                             android:background="@drawable/textview_border_default"
-                            android:textColor="@android:color/white"
                             android:ems="10"
                             android:padding="@dimen/LetterPadding"
                             android:text="@string/Letter2_1"
                             android:textAlignment="center"
+                            android:textColor="@android:color/white"
                             android:textSize="@dimen/LetterTextSize" />
 
                         <TextView
@@ -191,11 +194,11 @@
                             android:layout_width="@dimen/LetterWidth"
                             android:layout_height="@dimen/LetterHeight"
                             android:background="@drawable/textview_border_default"
-                            android:textColor="@android:color/white"
                             android:ems="10"
                             android:padding="@dimen/LetterPadding"
                             android:text="@string/Letter2_2"
                             android:textAlignment="center"
+                            android:textColor="@android:color/white"
                             android:textSize="@dimen/LetterTextSize" />
 
                         <TextView
@@ -203,11 +206,11 @@
                             android:layout_width="@dimen/LetterWidth"
                             android:layout_height="@dimen/LetterHeight"
                             android:background="@drawable/textview_border_default"
-                            android:textColor="@android:color/white"
                             android:ems="10"
                             android:padding="@dimen/LetterPadding"
                             android:text="@string/Letter2_3"
                             android:textAlignment="center"
+                            android:textColor="@android:color/white"
                             android:textSize="@dimen/LetterTextSize" />
 
                         <TextView
@@ -215,11 +218,11 @@
                             android:layout_width="@dimen/LetterWidth"
                             android:layout_height="@dimen/LetterHeight"
                             android:background="@drawable/textview_border_default"
-                            android:textColor="@android:color/white"
                             android:ems="10"
                             android:padding="@dimen/LetterPadding"
                             android:text="@string/Letter2_4"
                             android:textAlignment="center"
+                            android:textColor="@android:color/white"
                             android:textSize="@dimen/LetterTextSize" />
 
                         <TextView
@@ -227,11 +230,11 @@
                             android:layout_width="@dimen/LetterWidth"
                             android:layout_height="@dimen/LetterHeight"
                             android:background="@drawable/textview_border_default"
-                            android:textColor="@android:color/white"
                             android:ems="10"
                             android:padding="@dimen/LetterPadding"
                             android:text="@string/Letter2_5"
                             android:textAlignment="center"
+                            android:textColor="@android:color/white"
                             android:textSize="@dimen/LetterTextSize" />
 
                     </TableRow>
@@ -245,11 +248,11 @@
                             android:layout_width="@dimen/LetterWidth"
                             android:layout_height="@dimen/LetterHeight"
                             android:background="@drawable/textview_border_default"
-                            android:textColor="@android:color/white"
                             android:ems="10"
                             android:padding="@dimen/LetterPadding"
                             android:text="@string/Letter2_1"
                             android:textAlignment="center"
+                            android:textColor="@android:color/white"
                             android:textSize="@dimen/LetterTextSize" />
 
                         <TextView
@@ -257,11 +260,11 @@
                             android:layout_width="@dimen/LetterWidth"
                             android:layout_height="@dimen/LetterHeight"
                             android:background="@drawable/textview_border_default"
-                            android:textColor="@android:color/white"
                             android:ems="10"
                             android:padding="@dimen/LetterPadding"
                             android:text="@string/Letter2_2"
                             android:textAlignment="center"
+                            android:textColor="@android:color/white"
                             android:textSize="@dimen/LetterTextSize" />
 
                         <TextView
@@ -269,11 +272,11 @@
                             android:layout_width="@dimen/LetterWidth"
                             android:layout_height="@dimen/LetterHeight"
                             android:background="@drawable/textview_border_default"
-                            android:textColor="@android:color/white"
                             android:ems="10"
                             android:padding="@dimen/LetterPadding"
                             android:text="@string/Letter2_3"
                             android:textAlignment="center"
+                            android:textColor="@android:color/white"
                             android:textSize="@dimen/LetterTextSize" />
 
                         <TextView
@@ -281,11 +284,11 @@
                             android:layout_width="@dimen/LetterWidth"
                             android:layout_height="@dimen/LetterHeight"
                             android:background="@drawable/textview_border_default"
-                            android:textColor="@android:color/white"
                             android:ems="10"
                             android:padding="@dimen/LetterPadding"
                             android:text="@string/Letter2_4"
                             android:textAlignment="center"
+                            android:textColor="@android:color/white"
                             android:textSize="@dimen/LetterTextSize" />
 
                         <TextView
@@ -293,11 +296,11 @@
                             android:layout_width="@dimen/LetterWidth"
                             android:layout_height="@dimen/LetterHeight"
                             android:background="@drawable/textview_border_default"
-                            android:textColor="@android:color/white"
                             android:ems="10"
                             android:padding="@dimen/LetterPadding"
                             android:text="@string/Letter2_5"
                             android:textAlignment="center"
+                            android:textColor="@android:color/white"
                             android:textSize="@dimen/LetterTextSize" />
 
                     </TableRow>
@@ -311,11 +314,11 @@
                             android:layout_width="@dimen/LetterWidth"
                             android:layout_height="@dimen/LetterHeight"
                             android:background="@drawable/textview_border_default"
-                            android:textColor="@android:color/white"
                             android:ems="10"
                             android:padding="@dimen/LetterPadding"
                             android:text="@string/Letter2_1"
                             android:textAlignment="center"
+                            android:textColor="@android:color/white"
                             android:textSize="@dimen/LetterTextSize" />
 
                         <TextView
@@ -323,11 +326,11 @@
                             android:layout_width="@dimen/LetterWidth"
                             android:layout_height="@dimen/LetterHeight"
                             android:background="@drawable/textview_border_default"
-                            android:textColor="@android:color/white"
                             android:ems="10"
                             android:padding="@dimen/LetterPadding"
                             android:text="@string/Letter2_2"
                             android:textAlignment="center"
+                            android:textColor="@android:color/white"
                             android:textSize="@dimen/LetterTextSize" />
 
                         <TextView
@@ -335,11 +338,11 @@
                             android:layout_width="@dimen/LetterWidth"
                             android:layout_height="@dimen/LetterHeight"
                             android:background="@drawable/textview_border_default"
-                            android:textColor="@android:color/white"
                             android:ems="10"
                             android:padding="@dimen/LetterPadding"
                             android:text="@string/Letter2_3"
                             android:textAlignment="center"
+                            android:textColor="@android:color/white"
                             android:textSize="@dimen/LetterTextSize" />
 
                         <TextView
@@ -347,11 +350,11 @@
                             android:layout_width="@dimen/LetterWidth"
                             android:layout_height="@dimen/LetterHeight"
                             android:background="@drawable/textview_border_default"
-                            android:textColor="@android:color/white"
                             android:ems="10"
                             android:padding="@dimen/LetterPadding"
                             android:text="@string/Letter2_4"
                             android:textAlignment="center"
+                            android:textColor="@android:color/white"
                             android:textSize="@dimen/LetterTextSize" />
 
                         <TextView
@@ -359,11 +362,11 @@
                             android:layout_width="@dimen/LetterWidth"
                             android:layout_height="@dimen/LetterHeight"
                             android:background="@drawable/textview_border_default"
-                            android:textColor="@android:color/white"
                             android:ems="10"
                             android:padding="@dimen/LetterPadding"
                             android:text="@string/Letter2_5"
                             android:textAlignment="center"
+                            android:textColor="@android:color/white"
                             android:textSize="@dimen/LetterTextSize" />
 
                     </TableRow>
@@ -377,11 +380,11 @@
                             android:layout_width="@dimen/LetterWidth"
                             android:layout_height="@dimen/LetterHeight"
                             android:background="@drawable/textview_border_default"
-                            android:textColor="@android:color/white"
                             android:ems="10"
                             android:padding="@dimen/LetterPadding"
                             android:text="@string/Letter2_1"
                             android:textAlignment="center"
+                            android:textColor="@android:color/white"
                             android:textSize="@dimen/LetterTextSize" />
 
                         <TextView
@@ -389,11 +392,11 @@
                             android:layout_width="@dimen/LetterWidth"
                             android:layout_height="@dimen/LetterHeight"
                             android:background="@drawable/textview_border_default"
-                            android:textColor="@android:color/white"
                             android:ems="10"
                             android:padding="@dimen/LetterPadding"
                             android:text="@string/Letter2_2"
                             android:textAlignment="center"
+                            android:textColor="@android:color/white"
                             android:textSize="@dimen/LetterTextSize" />
 
                         <TextView
@@ -401,11 +404,11 @@
                             android:layout_width="@dimen/LetterWidth"
                             android:layout_height="@dimen/LetterHeight"
                             android:background="@drawable/textview_border_default"
-                            android:textColor="@android:color/white"
                             android:ems="10"
                             android:padding="@dimen/LetterPadding"
                             android:text="@string/Letter2_3"
                             android:textAlignment="center"
+                            android:textColor="@android:color/white"
                             android:textSize="@dimen/LetterTextSize" />
 
                         <TextView
@@ -413,11 +416,11 @@
                             android:layout_width="@dimen/LetterWidth"
                             android:layout_height="@dimen/LetterHeight"
                             android:background="@drawable/textview_border_default"
-                            android:textColor="@android:color/white"
                             android:ems="10"
                             android:padding="@dimen/LetterPadding"
                             android:text="@string/Letter2_4"
                             android:textAlignment="center"
+                            android:textColor="@android:color/white"
                             android:textSize="@dimen/LetterTextSize" />
 
                         <TextView
@@ -425,33 +428,15 @@
                             android:layout_width="@dimen/LetterWidth"
                             android:layout_height="@dimen/LetterHeight"
                             android:background="@drawable/textview_border_default"
-                            android:textColor="@android:color/white"
                             android:ems="10"
                             android:padding="@dimen/LetterPadding"
                             android:text="@string/Letter2_5"
                             android:textAlignment="center"
+                            android:textColor="@android:color/white"
                             android:textSize="@dimen/LetterTextSize" />
 
                     </TableRow>
 
-                    <TableRow
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
-
-
-                    </TableRow>
-
-                    <TableRow
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
-
-                    </TableRow>
-
-                    <TableRow
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
-
-                    </TableRow>
                 </TableLayout>
             </androidx.constraintlayout.widget.ConstraintLayout>
 

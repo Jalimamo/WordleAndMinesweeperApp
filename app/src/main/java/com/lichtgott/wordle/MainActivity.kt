@@ -1,11 +1,22 @@
 package com.lichtgott.wordle
 
 import android.annotation.SuppressLint
+import android.app.Application
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.TypedValue
+import android.view.View
+import android.view.ViewGroup
 import android.widget.Button
+import android.widget.TableLayout
+import android.widget.TableRow
 import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
+import androidx.core.content.ContextCompat
+import androidx.core.view.children
+import androidx.core.view.get
+import androidx.core.view.setPadding
 import com.lichtgott.wordle.databinding.ActivityMainBinding
 
 
@@ -18,7 +29,11 @@ enum class GuessColor {
 class MainActivity : AppCompatActivity() {
 
 
-    private final var wordLength = 5;
+    private var debugMode = false;
+
+    private val wordLength = 5;
+
+    private val defaultGuessCount = 6;
 
     private lateinit var searchedWord:String;
     private lateinit var binding: ActivityMainBinding
@@ -31,6 +46,8 @@ class MainActivity : AppCompatActivity() {
     private var guessCount = 0;
     private var cursor = 0;
 
+    private var overtime = false;
+
     @SuppressLint("DiscouragedApi")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,9 +56,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
 
-        searchedWord = choseWord()
 
-        letterGrid = MutableList(6) { row ->
+        letterGrid = MutableList(defaultGuessCount) { row ->
             Array (wordLength) {col ->
                 val resId = resources.getIdentifier("letterView${row+1}_${col+1}", "id" , packageName)
                 findViewById<TextView>(resId)
@@ -57,21 +73,7 @@ class MainActivity : AppCompatActivity() {
 
 
 
-        for (row in letterGrid){
-            for (cell in row){
-                cell.text = ""
-                cell.setBackgroundResource(R.drawable.textview_border_default)
-            }
-        }
-
-        for (row in keyboard) {
-            for (button in row) {
-                button.setOnClickListener {
-                    val btn = it as Button
-                    keyPressHandler(btn)
-                }
-            }
-        }
+        start()
 
 
 
@@ -119,12 +121,22 @@ class MainActivity : AppCompatActivity() {
 
     fun enterHandler(){
         if(cursor != wordLength) {
-            Toast.makeText(this,"Please enter a 5 Letter Word first", Toast.LENGTH_SHORT).show()
+            if(debugMode){
+                Toast.makeText(this,searchedWord, Toast.LENGTH_SHORT).show()
+            }else{
+                Toast.makeText(this,"Please enter a 5 Letter Word first", Toast.LENGTH_SHORT).show()
+            }
             return
         }
 
-        if(false) { //tests for a real Word later
+        var word = ""
+        for(i in 0..wordLength - 1){
+            word += letterGrid[guessCount][i].text
+        }
+
+        if(!assets.open("wordlist.txt").bufferedReader().readLines().contains(word)){
             Toast.makeText(this,"Not a valid Word",Toast.LENGTH_SHORT).show()
+            return
         }
 
 
@@ -160,6 +172,7 @@ class MainActivity : AppCompatActivity() {
 
         }
 
+        //Coloring everything right
 
         for(i in 0..wordLength - 1){
             when(colorCache[i]){
@@ -186,17 +199,129 @@ class MainActivity : AppCompatActivity() {
 
         }
 
+        if(word == searchedWord){
+            AlertDialog.Builder(this)
+                .setTitle("You won!")
+                .setMessage("You got the right word ${searchedWord} in ${guessCount} Trys!")
+                .setPositiveButton("New Word") { _, _ -> start()}
+                .setNegativeButton("Beenden") {_,_ -> System.exit(0) }
+                .show()
+
+            return
+
+        }
+
         guessCount++
         cursor = 0
         buttonCache = Array(wordLength) { null }
+
+        if(guessCount >= defaultGuessCount && !overtime) {
+            AlertDialog.Builder(this)
+                .setTitle("You ran out of Guesses")
+                .setMessage("Do you want to continue?")
+                .setPositiveButton("Yes") { _, _ ->
+                    overtime = true
+                    createNewLine()
+                }
+                .setNegativeButton("No") { _, _ ->
+
+                    AlertDialog.Builder(this)
+                        .setTitle("You lost!")
+                        .setMessage("The word was ${searchedWord}!")
+                        .setPositiveButton("New Word") { _, _ -> start()}
+                        .setNegativeButton("Beenden") {_,_ -> System.exit(0) }
+                        .show()
+
+                }
+                .show()
+        }
+
+        if(overtime){
+            createNewLine()
+        }
 
 
     }
 
 
     fun choseWord():String{
-        return "LEGAT"
-        //TODO: Implement
+        return assets.open("resultlist.txt").bufferedReader().readLines().random()
+    }
+
+    fun start(){
+        val tableLayout = findViewById<TableLayout>(R.id.Guesses)
+
+
+        for(row in tableLayout.children.toList()){//toList is used to copy the child-Sequence
+            if(row.tag == "OvertimeRow") {
+                tableLayout.removeView(row)
+            }
+        }
+
+        letterGrid = letterGrid.subList(0,defaultGuessCount)
+
+        for (row in letterGrid){
+            for (cell in row){
+                cell.text = ""
+                cell.setBackgroundResource(R.drawable.textview_border_default)
+            }
+        }
+
+        for (row in keyboard) {
+            for (button in row) {
+                button.setOnClickListener {
+                    val btn = it as Button
+                    keyPressHandler(btn)
+                }
+                button.backgroundTintList = getColorStateList(R.color.defaultColorKeys)
+            }
+        }
+
+        searchedWord = choseWord()
+
+        guessCount = 0
+
+        cursor = 0
+
+        overtime = false
+    }
+
+
+    fun createNewLine(){
+
+        val tableLayout = findViewById<TableLayout>(R.id.Guesses)
+
+        val newRow = TableRow(this)
+
+
+
+        for (i in 0..wordLength - 1){
+            val newLetter = TextView(this).apply {
+                layoutParams = TableRow.LayoutParams(
+                    resources.getDimensionPixelSize(R.dimen.LetterWidth),
+                    resources.getDimensionPixelSize(R.dimen.LetterHeight)
+                )
+                setBackgroundResource(R.drawable.textview_border_default)
+                setTextColor(ContextCompat.getColor(context, android.R.color.white))
+                text = ""
+                setEms(10)
+                setPadding(resources.getDimensionPixelSize(R.dimen.LetterPadding))
+                textAlignment = TextView.TEXT_ALIGNMENT_CENTER
+                setTextSize(
+                    TypedValue.COMPLEX_UNIT_PX,
+                    resources.getDimension(R.dimen.LetterTextSize)
+                )
+            }
+            newRow.addView(newLetter)
+        }
+
+        newRow.tag = "OvertimeRow"
+
+        letterGrid.add(Array(wordLength) { col ->
+            newRow[col] as TextView
+        })
+
+        tableLayout.addView(newRow)
     }
 
     /**
