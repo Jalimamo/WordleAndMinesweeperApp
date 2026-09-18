@@ -12,7 +12,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Wordle">
         <activity
-            android:name=".MainActivity"
+            android:name=".mine_sweeper.MineSweeperActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainMenu"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -20,6 +23,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".WordleActivity"
+            android:exported="false" />
     </application>
 
 </manifest>

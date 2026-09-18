@@ -13,4 +13,18 @@
     <color name="defaultColorKeys">#818384</color>
     <color name="defaultColorLetters">#47474B</color>
     <color name="textViewBorderColor">#000000</color>
+    <color name="active">#3FFF3F</color>
+    <color name="inactive">#FF3F3F</color>
+    <color name="bomb">#FF0000</color>
+    <color name="marked">#FFFF00</color>
+    <color name="opened">#A3A3AF</color>
+    <color name="closed">#33333F</color>
+    <color name="openedNumber1">#1976D2</color> <!-- Blau -->
+    <color name="openedNumber2">#388E3C</color> <!-- Grün -->
+    <color name="openedNumber3">#D32F2F</color> <!-- Rot -->
+    <color name="openedNumber4">#7B1FA2</color> <!-- Lila -->
+    <color name="openedNumber5">#F57C00</color> <!-- Orange -->
+    <color name="openedNumber6">#0097A7</color> <!-- Cyan -->
+    <color name="openedNumber7">#5D4037</color> <!-- Braun -->
+    <color name="openedNumber8">#455A64</color> <!-- Grau -->
 </resources>

@@ -1,4 +1,4 @@
-package com.lichtgott.wordle
+package com.lichtgott.kathi_und_flo_weinachtsspiele
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

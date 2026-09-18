@@ -1,4 +1,4 @@
-package com.lichtgott.wordle
+package com.lichtgott.kathi_und_flo_weinachtsspiele
 
 import org.junit.Test
 

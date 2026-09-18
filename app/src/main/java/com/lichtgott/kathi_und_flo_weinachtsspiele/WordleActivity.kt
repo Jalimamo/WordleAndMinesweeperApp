@@ -1,12 +1,10 @@
-package com.lichtgott.wordle
+package com.lichtgott.kathi_und_flo_weinachtsspiele
 
 import android.annotation.SuppressLint
-import android.app.Application
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.TypedValue
-import android.view.View
-import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TableLayout
 import android.widget.TableRow
@@ -17,7 +15,7 @@ import androidx.core.content.ContextCompat
 import androidx.core.view.children
 import androidx.core.view.get
 import androidx.core.view.setPadding
-import com.lichtgott.wordle.databinding.ActivityMainBinding
+import com.lichtgott.kathi_und_flo_weinachtsspiele.databinding.ActivityWordleBinding
 
 
 
@@ -26,7 +24,7 @@ enum class GuessColor {
     WRONG,WRONG_PLACE,RIGHT,DEFAULT
 }
 
-class MainActivity : AppCompatActivity() {
+class WordleActivity : AppCompatActivity() {
 
 
     private var debugMode = false;
@@ -36,7 +34,7 @@ class MainActivity : AppCompatActivity() {
     private val defaultGuessCount = 6;
 
     private lateinit var searchedWord:String;
-    private lateinit var binding: ActivityMainBinding
+    private lateinit var binding: ActivityWordleBinding
     private lateinit var letterGrid: MutableList<Array<TextView>>
 
     private lateinit var keyboard: Array<Array<Button>>
@@ -52,7 +50,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        binding = ActivityMainBinding.inflate(layoutInflater)
+        binding = ActivityWordleBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
 
@@ -204,7 +202,7 @@ class MainActivity : AppCompatActivity() {
                 .setTitle("You won!")
                 .setMessage("You got the right word ${searchedWord} in ${guessCount} Trys!")
                 .setPositiveButton("New Word") { _, _ -> start()}
-                .setNegativeButton("Beenden") {_,_ -> System.exit(0) }
+                .setNegativeButton("Beenden") {_,_ -> backToMenu() }
                 .show()
 
             return
@@ -229,7 +227,7 @@ class MainActivity : AppCompatActivity() {
                         .setTitle("You lost!")
                         .setMessage("The word was ${searchedWord}!")
                         .setPositiveButton("New Word") { _, _ -> start()}
-                        .setNegativeButton("Beenden") {_,_ -> System.exit(0) }
+                        .setNegativeButton("Beenden") {_,_ -> backToMenu() }
                         .show()
 
                 }
@@ -324,11 +322,12 @@ class MainActivity : AppCompatActivity() {
         tableLayout.addView(newRow)
     }
 
-    /**
-     * A native method that is implemented by the 'wordle' native library,
-     * which is packaged with this application.
-     */
-    external fun stringFromJNI(): String
+    fun backToMenu() {
+        val intent = Intent(this, MainMenu::class.java)
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+        startActivity(intent)
+        finish()
+    }
 
     companion object {
         // Used to load the 'wordle' library on application startup.

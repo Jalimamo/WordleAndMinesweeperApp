@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.lichtgott.wordle"
+    namespace = "com.lichtgott.kathi_und_flo_weinachtsspiele"
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "com.lichtgott.wordle"
+        applicationId = "com.lichtgott.kathi_und_flo_weinachtsspiele"
         minSdk = 24
         targetSdk = 36
         versionCode = 1
@@ -50,6 +50,7 @@ dependencies {
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
     implementation(libs.androidx.constraintlayout)
+    implementation(libs.androidx.activity)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Wordle</string>
+    <string name="app_name">Kathi und Flos Weinachtsgames</string>
 
     <string name="LetterWidth">64dp</string>
 
@@ -78,8 +78,12 @@
     <string name="Key3_7">N</string>
     <string name="Key3_8">M</string>
     <string name="Key3_9">⌫</string>
-
-
+    <string name="MainMenuText">Kathi und Flos Weinachtshandygames</string>
+    <string name="exit_tooltip">App beenden</string>
+    <string name="activity_a">Wordle</string>
+    <string name="activity_b">Minesweeper</string>
+    <string name="mineSymbol">⛏️</string>
+    <string name="markSymbol">💣</string>
 
 
 </resources>
